@@ -6,7 +6,7 @@ class ToggleCase
   end
 
   def to_s
-    toggle_case_char = Proc.new do |char|
+    msg.split("").map do |char|
       if(char=~/[a-z]/) 
         char.upcase
       elsif(char=~/[A-Z]/) 
@@ -14,9 +14,7 @@ class ToggleCase
       else 
         char
       end
-    end
-
-    msg.split("").map(&toggle_case_char).join()
+    end.join()
   end
 end
 
