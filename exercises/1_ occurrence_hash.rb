@@ -1,13 +1,9 @@
 def calculate_freq(string)
-  freq_hash = {}
+  freq_hash = Hash.new(0)
 
   string.split("").each do |word|
     if word =~ /[a-zA-Z]/
-      if freq_hash[word]
-        freq_hash[word] += 1
-      else
-        freq_hash[word] = 1
-      end
+      freq_hash[word] += 1
     end
   end
   
