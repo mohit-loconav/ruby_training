@@ -1,9 +1,9 @@
 def count_character(string)
   count = {
-    :lowercase => 0,
-    :uppercase => 0,
-    :numeric => 0,
-    :special => 0
+    lowercase: 0,
+    uppercase: 0,
+    numeric: 0,
+    special: 0
   }
 
   string.each_char do |char|

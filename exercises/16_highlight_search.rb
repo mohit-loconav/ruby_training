@@ -1,7 +1,7 @@
 def highlight_search(string, search_text)
   result = {
-    :string => string.downcase.gsub(search_text, "(#{search_text})"),
-    :count => string.downcase.scan(search_text).length
+    string: string.downcase.gsub(search_text, "(#{search_text})"),
+    count: string.downcase.scan(search_text).length
   }
 end
 
