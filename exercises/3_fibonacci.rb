@@ -11,7 +11,6 @@ def generate_fibonacci(max)
   yield(list)
 end
 
-
 puts "Enter max limit"
 input_string = gets.chomp
 if input_string == ""
