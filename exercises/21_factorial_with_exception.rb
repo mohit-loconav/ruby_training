@@ -4,8 +4,8 @@ end
 
 begin
   num = gets.chomp.to_i
-  raise "Negative number entered" if num<0
+  raise ArgumentError, "Negative number entered" if num<0
   puts factorial(num)
 rescue StandardError => err
-  puts err
+  puts "#{err.class}: #{err}"
 end
