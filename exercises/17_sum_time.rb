@@ -11,11 +11,7 @@ end
 
 #to validate 24 hour time string
 def validate_time(time)
-  if((time=~/([01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]/) != nil)
-    true
-  else
-    false
-  end
+  time=~/^([01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]/
 end
 
 #generate a time string as per the question
