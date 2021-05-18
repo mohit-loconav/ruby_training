@@ -17,12 +17,9 @@ end
 
 begin
   input = gets.chomp
-  
   raise "Please provide an input" if input == ""
-
   firstname, lastname = input.split
   obj = Name.new(firstname, lastname)
-
   obj.say_hello
 rescue StandardError => err
   puts err
