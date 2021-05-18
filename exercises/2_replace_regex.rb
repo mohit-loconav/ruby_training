@@ -1,5 +1,5 @@
 def censor_vowel(string)
-  string.gsub(/[aeiou]/, "*")
+  string.gsub(/[aeiou]/i, "*")
 end
 
 puts "Enter the string"
