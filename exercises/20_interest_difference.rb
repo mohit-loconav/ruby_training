@@ -22,6 +22,6 @@ class InterestDiff
 end
 
 
-obj = InterestDiff.new ARGV[0].to_f, ARGV[1].to_f
+obj = InterestDiff.new(ARGV[0].to_f, ARGV[1].to_f)
 
 puts "Interest difference= #{obj.calculate_difference}"
