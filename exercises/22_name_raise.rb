@@ -1,8 +1,9 @@
 class Name
   def initialize(firstname, lastname)
-    if !firstname || !lastname
+    unless firstname && lastname
       raise "Names cannot be empty"
-    elsif (firstname[0] =~ /[A-Z]/) == nil
+    end
+    unless firstname =~ /^[A-Z]/
       raise "First name should begin with a capital letter"
     end
 

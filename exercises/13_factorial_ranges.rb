@@ -1,5 +1,5 @@
 def factorial(num)
-  num== 0 ? 1 : (1..num).inject {|fact, curr| fact*curr}
+  (1..num).reduce(:*) || 1
 end
 
 puts factorial(gets.chomp.to_i)
