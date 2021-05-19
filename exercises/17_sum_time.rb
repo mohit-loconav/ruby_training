@@ -1,3 +1,4 @@
+require "time"
 def sum_time(time_str_1, time_str_2)
   time_arr_1 = time_str_1.split(":").map {|el| el.to_i}
   time_arr_2 = time_str_2.split(":").map {|el| el.to_i}
