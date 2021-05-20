@@ -1,15 +1,11 @@
 def arr_hash(arr)
-  hash = Hash.new()
+  hash = Hash.new { |h,k| h[k] = [] }
 
   arr.sort_by! {|el| el.length}
 
   arr.each do |el|
     key = el.length
-    if(hash[key])
-      hash[key].push(el)
-    else
-      hash[key] = [el]
-    end
+    hash[key] << el
   end
   hash
 end

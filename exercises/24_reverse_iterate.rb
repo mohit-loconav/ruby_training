@@ -1,7 +1,7 @@
 class Array
-  def reverse_iterate(&block)
+  def reverse_iterate
     for i in 1..self.length
-      block.call self[-i]
+      yield self[-i]
     end
   end
 end

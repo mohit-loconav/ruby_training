@@ -1,6 +1,6 @@
 require "csv" 
 
-employees = Hash.new()
+employees = Hash.new { |h,k| h[k] = [] }
 # File.open("23.csv", "r") do |file|
 #   file.gets
 #   while line = file.gets
@@ -11,10 +11,9 @@ employees = Hash.new()
 # end
 
 CSV.foreach("23.csv", headers: true) do |row|
-  employees[:"#{row["Designation"]}"] = employees[:"#{row["Designation"]}"] || []
   employees[:"#{row["Designation"]}"] << "#{row["Name"]} (EmpId: #{row["EmpId"]})"
 end
-
+puts employees
 File.open("23.txt", "w") do |file|
   employees.sort.each do |row|
     file.puts row[0].to_s + (row[1].length>1 ? 's' : '')

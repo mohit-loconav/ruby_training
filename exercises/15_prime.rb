@@ -1,5 +1,5 @@
 def generate_prime(limit)
-  result = 1.step(limit, 2).filter do |num|
+  result = 1.step(limit, 2).select do |num|
     divisor = 2
     while divisor <= num/2
       break if num%divisor == 0
